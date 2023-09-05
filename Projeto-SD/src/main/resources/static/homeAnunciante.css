@@ -1,0 +1,56 @@
+/* homeAnunciante.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: cornflowerblue;
+}
+
+.menu-bar {
+  background-color: #4caf50;
+  padding: 10px;
+  text-align: center;
+}
+
+.menu-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-bar li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.menu-bar a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-bar a:hover {
+  background-color: #45a049;
+}
+
+.menu-bar a:active {
+  background-color: #3e8e41;
+}

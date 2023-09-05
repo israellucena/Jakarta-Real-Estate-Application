@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Imobiliária - Home do cliente</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/homeClient.css}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Imobiliária - Home do cliente</h1>
+        <hr>
+        <div class="menu-bar">
+            <ul>
+                <li><a th:href="@{/searchClient/{logedUserId}(logedUserId=${logedClientId})}">Realizar pesquisa</a></li>
+                <li><a th:href="@{/seeHomesClient/{logedClientId}(logedClientId=${logedClientId})}">Verificar suas
+                        moradias</a></li>
+                <li><a th:href="@{/seeContractsClient/{logedClientId}(logedClientId=${logedClientId})}">Verificar seus
+                        contratos</a></li>
+                <li><a th:href="@{/seePendingContractsClient/{logedClientId}(logedClientId=${logedClientId})}">Verificar
+                        seus
+                        contratos pendentes</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

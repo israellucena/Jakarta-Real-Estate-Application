@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Imobiliária - Início</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/index.css}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Imobiliária - Início</h1>
+        <hr>
+        <div class="menu-bar">
+            <ul>
+                <li>
+                    <h4><a th:href="@{/registrationClient}">Fazer registo de cliente</a></h4>
+                </li>
+                <li>
+                    <h4><a th:href="@{/registrationAnunciante}">Fazer registo de anunciante</a></h4>
+                </li>
+                <li>
+                    <h4><a th:href="@{/loginClient}">Fazer login de cliente</a></h4>
+                </li>
+                <li>
+                    <h4><a th:href="@{/loginAnunciante}">Fazer login de anunciante</a></h4>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

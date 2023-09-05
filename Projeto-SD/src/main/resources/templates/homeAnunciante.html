@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Imobiliária - Home do anunciante</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/homeAnunciante.css}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Imobiliária - Home do anunciante</h1>
+        <hr>
+        <div class="menu-bar">
+            <ul>
+                <li>
+                    <a th:href="@{/formAd/{logedAnuncianteId}(logedAnuncianteId=${logedAnuncianteId})}">Adicionar um
+                        anúncio</a>
+                </li>
+                <li>
+                    <a th:href="@{/searchAnunciante/{logedUserId}(logedUserId=${logedAnuncianteId})}">Realizar
+                        pesquisa</a>
+                </li>
+                <li><a th:href="@{/seeHomesAnunciante/{logedAnuncianteId}(logedAnuncianteId=${logedAnuncianteId})}">Verificar
+                        suas
+                        moradias</a></li>
+                <li><a th:href="@{/seeContractsAnunciante/{logedUserId}(logedUserId=${logedAnuncianteId})}">Verificar
+                        seus contratos</a></li>
+                <li><a
+                        th:href="@{/seePendingContractsAnunciante/{logedAnuncianteId}(logedAnuncianteId=${logedAnuncianteId})}">Verificar
+                        seus contratos pendentes</a></li>
+                <li><a
+                        th:href="@{/seeStatisticsAnunciante/{logedAnuncianteId}(logedAnuncianteId=${logedAnuncianteId})}">Verificar
+                        suas estatísticas</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

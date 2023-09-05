@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Imobiliária - Minhas estatísticas</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/searchResult.css}">
+</head>
+
+<body>
+    <div>
+        <h1> Imobiliária - Minhas estatísticas </h1>
+        <hr>
+
+        <table border="1" class="table table-striped table-responsive-md">
+            <thead>
+                <tr>
+                    <th>Número de moradias arrendadas</th>
+                    <th>Número de moradias vendidas</th>
+                    <th>Número de cidades com moradias ativas</th>
+                    <th>Valor total (mensal) dos arrendamentos</th>
+                    <th>Valor total das moradias vendidas</th>
+                    <th>Número de clientes diferentes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td th:text="${rentedHouses}"></td>
+                    <td th:text="${housesSold}"></td>
+                    <td th:text="${numCities}"></td>
+                    <td th:text="${totalRented}"></td>
+                    <td th:text="${totalSold}"></td>
+                    <td th:text="${numClients}"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <a th:href="@{/homeAnunciante/{logedAnuncianteId}(logedAnuncianteId=${logedAnuncianteId})}">Voltar para página
+            principal</a>
+    </div>
+</body>
+
+</html>

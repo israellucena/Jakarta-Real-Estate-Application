@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Imobiliária - Registo de Anunciante</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/registration.css}">
+</head>
+
+<body>
+    <div>
+        <h1>Imobiliária - Registo de Anunciante</h1>
+        <hr>
+
+        <form action="#" th:action="@{/saveAnunciante}" th:object="${newAnunciante}" method="POST">
+            <label>Nome do anunciante: </label>
+            <input type="text" th:field="*{name}">
+            <br>
+            <label>E-mail do anunciante: </label>
+            <input type="text" th:field="*{email}">
+            <br>
+            <label>Senha: </label>
+            <input type="text" th:field="*{psw}">
+            <br>
+            <button type="submit">Registar</button>
+        </form>
+
+        <hr>
+
+        <h4>Já possui registo? <a th:href="@{/loginAnunciante}">Login</a></h4>
+    </div>
+</body>
+
+</html>

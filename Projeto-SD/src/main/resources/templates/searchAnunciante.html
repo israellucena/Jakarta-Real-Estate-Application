@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Imobiliária - Pesquisa</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/search.css}">
+</head>
+
+<body>
+    <div>
+        <h1> Imobiliária - Pesquisa </h1>
+        <hr>
+        <form action="#" th:action="@{/toSearch/2/{logedUserId}(logedUserId=${logedUserId})}" th:object="${homeSearch}"
+            method="POST">
+            <label>Venda ou arrendamento: </label>
+            <select th:field="*{type}">
+                <option th:value="Venda">Venda</option>
+                <option th:value="Arrendamento">Arrendamento</option>
+            </select>
+            <br>
+            <label>Cidade: </label>
+            <input type="text" th:field="*{city}">
+            <br>
+            <label>Preço mínimo (se por arrendamento, o preço mensal): </label>
+            <input type="number" th:field="*{minCost}">
+            <br>
+            <label>Preço máximo (se por arrendamento, o preço mensal): </label>
+            <input type="number" th:field="*{maxCost}">
+            <br>
+            <button type="submit">Pesquisar</button>
+        </form>
+    </div>
+</body>
+
+</html>
